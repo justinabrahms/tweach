@@ -1,3 +1,5 @@
+module.exports = main;
+
 var twitter = require('twitter');
 var when = require('when');
 var apply = require('when/apply');
@@ -116,4 +118,6 @@ function fetchRetweetPage(id, nextPage, acc) {
   return p.promise;
 }
 
-main();
+if (require.main === module) {
+  main();
+}
