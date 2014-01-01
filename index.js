@@ -1,19 +1,19 @@
 module.exports = main;
 
 var twitter = require('twitter');
+var fs = require('fs');
 var when = require('when');
 var apply = require('when/apply');
-var client = twitter({
-  consumer_key: 'NnBV66ahpGGsVNd0AMZ8Tg',
-  consumer_secret: 'HYRdrY8GXIM2jJIpYg1OJc7kXDBPGfM9QLbg3b5U47I',
-  access_token_key: '6899112-nrjfWUzyaOixIG6pbbITNSE2LPHkTBInNSMBDnRI2T',
-  access_token_secret: 'SJSgrwnOonrZGn8PP4ocxfVEU7k0Z1uLsY6KyHhmvcMlR'
-});
 var argv = require('optimist')
-  .usage('Usage: $0 --tweet=[tweet_id_here]')
-  .demand('tweet')
-  .string('tweet')
+  .usage('Usage: $0 --tweet=[tweet_id_here] --config=[/path/to/file]')
+  .demand('tweet', 'config')
+  .string('tweet', 'config')
   .argv;
+
+
+var config = JSON.parse(fs.readFileSync(argv.config));
+
+var client = twitter(config);
 
 // TODO(justinabrahms): We might have some limits we're ignoring, so
 // could be problematic for many retweets.
