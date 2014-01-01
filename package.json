@@ -1,6 +1,6 @@
 {
   "name": "tweach",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Figure out how many folks your tweet reached",
   "main": "index.js",
   "dependencies": {
