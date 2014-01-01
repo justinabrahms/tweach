@@ -6,10 +6,9 @@ var when = require('when');
 var apply = require('when/apply');
 var argv = require('optimist')
   .usage('Usage: $0 --tweet=[tweet_id_here] --config=[/path/to/file]')
-  .demand('tweet', 'config')
-  .string('tweet', 'config')
+  .string(['tweet', 'config'])
+  .demand(['tweet', 'config'])
   .argv;
-
 
 var config = JSON.parse(fs.readFileSync(argv.config));
 
