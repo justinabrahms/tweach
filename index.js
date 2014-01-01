@@ -23,7 +23,6 @@ if (argv.debug) {
   debug = console.log;
 }
 
-
 function main() {
   // TODO(justinabrahms): Pull from flag.
   var tweetId = argv.tweet;
