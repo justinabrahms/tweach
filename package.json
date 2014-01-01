@@ -1,0 +1,28 @@
+{
+  "name": "tweach",
+  "version": "0.1.0",
+  "description": "Figure out how many folks your tweet reached",
+  "main": "index.js",
+  "dependencies": {
+    "optimist": "~0.6.0",
+    "twitter": "~0.2.5",
+    "when": "~2.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/justinabrahms/tweach.git"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "Justin Abrahms",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justinabrahms/tweach/issues"
+  },
+  "homepage": "https://github.com/justinabrahms/tweach"
+}
