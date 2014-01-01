@@ -39,7 +39,7 @@ function main() {
 
 function outputResults(tweet, total) {
   var count = tweet.user.followers_count;
-  var percentage = (total / count).toFixed(2) * 100;
+  var percentage = ((total / count) * 100).toFixed(2);
   console.log("Original user had ", count, " followers, and the " + 
               "tweet reached a total of ", total, " people which " + 
               "is a " + percentage + "% increase.");
