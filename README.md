@@ -7,6 +7,8 @@ To install it:
 
 ```
 npm install -g tweach
+curl https://raw.github.com/justinabrahms/tweach/master/config.json.example > config.json
+# edit values of config.json
 ```
 
 Sometimes, we get just a few retweets, but they're by folks who have
